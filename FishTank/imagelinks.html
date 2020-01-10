@@ -1,0 +1,70 @@
+<html>
+<head>
+	<title>Image Map</title>
+	<link rel="stylesheet" type="text/css" href="imagelinks.css">
+</head>
+<body>
+
+<!-- Since the image is static and does not change size based on the window size, placing links on the image with image map is not difficult. However, the downside is that the links cannot be made visible unless you use a jquery plugin, which may require more code... -->
+<h1> Not responsive picture </h1>
+
+<img src="fishtank.jpg" alt="Fish Tank" usemap="#organism" class="nonResponsive">
+<map name="organism">
+	<area shape="circle" coords="460,310,30" href="https://en.wikipedia.org/wiki/Amphiprioninae" alt="Amphiprioninae" />
+	<area shape="circle" coords="235,410,55" href="https://en.wikipedia.org/wiki/Yellow_tang" alt="Yellow tang" />
+	<area shape="circle" coords="875,105,44" href="https://en.wikipedia.org/wiki/Whitetail_dascyllus" alt="Whitetail Dascyllus" />
+	<area shape="circle" coords="185,260,65" href="https://en.wikipedia.org/wiki/Copperband_butterflyfish" alt="Copperband Butterflyfish" />
+</map>
+
+
+<h1>Not responsive picture with buttons</h1>
+<div class="containerstatic">
+	<img src="fishtank.jpg" alt="Fish Tank" class="nonResponsive">
+	<form action="https://en.wikipedia.org/wiki/Amphiprioninae">
+		<button class="btn1static"></button>
+	</form>
+	<form action="https://en.wikipedia.org/wiki/Yellow_tang">
+		<button class="btn2static"></button>
+	</form>
+	<form action="https://en.wikipedia.org/wiki/Whitetail_dascyllus">
+		<button class="btn3static"></button>
+	</form>
+</div>
+
+<!-- It is possible to make an image with buttons to links that move with the size of the picture. However, the buttons' shapes do not scale with the picture and may look awkward. Adding buttons also seems to slightly move other existing buttons within div -->
+<h1>Responsive picture with buttons</h1>
+<div class="container">
+	<img src="fishtank.jpg" alt="Fish Tank" class="responsive">
+	<form action="https://en.wikipedia.org/wiki/Amphiprioninae">
+		<button class="btn1"></button>
+	</form>
+	<form action="https://en.wikipedia.org/wiki/Yellow_tang">
+		<button class="btn2"></button>
+	</form>
+	<form action="https://en.wikipedia.org/wiki/Amphiprioninae">
+		<button class="btn3"></button>
+	</form>
+</div>
+
+<!-- Image is responsive, and links in image map are also responsive. They move and scale with the picture. Only downside is the links are still not visible -->
+<h1>Responsive picture with responsive links</h1>
+<img src="fishtank.jpg" alt="Fish Tank" class="responsive" usemap="#fishmap">
+<map name="fishmap">
+	<area shape="circle" coords="660,445,30" href="https://en.wikipedia.org/wiki/Amphiprioninae" alt="Amphiprioninae" style=""/>
+	<area shape="circle" coords="353,600,65" href="https://en.wikipedia.org/wiki/Yellow_tang" alt="Yellow tang" />
+	<area shape="circle" coords="1250,150,44" href="https://en.wikipedia.org/wiki/Whitetail_dascyllus" alt="Whitetail Dascyllus" />
+	<area shape="circle" coords="250,370,75" href="https://en.wikipedia.org/wiki/Copperband_butterflyfish" alt="Copperband Butterflyfish" />
+</map>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.rwdImageMaps.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(e) {
+	    $('img[usemap]').rwdImageMaps();
+	});
+</script>
+
+
+
+</body>
+</html>
+
