@@ -1,0 +1,83 @@
+<link rel = "stylesheet" href="app.css" >
+
+<h1> Menu </h1>
+
+<%# two ways to do loops %>
+
+<% for (var i = 0; i < menu.length; i++){ %>
+	<li> 
+		<% if (menu[i].drink.toLowerCase() == "latte" || menu[i].drink.toLowerCase() == "mocha" ){%>  
+		<img src="/icons/latte.png"></img>
+		<%} %>
+
+		<% if (menu[i].drink.toLowerCase() == "mocha pot"){%>  
+			<img src="/icons/mocha_pot.png"></img>
+		<%} %>
+
+		<% if (menu[i].drink.toLowerCase() == "pour over"){%>  
+			<img src="/icons/pourOver.png"></img>
+		<%} %>
+
+		<% if (menu[i].drink.toLowerCase() == "french press"){%>  
+			<img src="/icons/frenchPress.png"></img>
+		<%} %>
+
+		<% if (menu[i].drink.toLowerCase() == "coffee milk"){%>  
+			<img src="/icons/coffeeMilk.png"></img>
+		<%} %>
+
+		<% if (menu[i].drink.toLowerCase() == "frappe"){%>  
+			<img src="/icons/frappe.png"></img>
+		<%} %>
+
+		<% if (menu[i].drink.toLowerCase() == "coffee beans (1lb)"){%>  
+			<img src="/icons/coffeeBeans.png"></img>
+		<%} %>
+
+		<% if (menu[i].drink.toLowerCase() == "coffee"){%>  
+			<img src="/icons/coffee.png"></img>
+		<%} %>
+
+		<%= menu[i].drink %>: <%= menu[i].cost %> 
+	</li>
+<% } %>
+
+
+<% menu.forEach(function(menu){ %>
+	<li> 
+		<% if (menu.drink.toLowerCase() == "latte" || menu.drink.toLowerCase() == "mocha" ){%>  
+		<img src="/icons/latte.png"></img>
+		<%} %>
+
+		<% if (menu.drink.toLowerCase() == "mocha pot"){%>  
+			<img src="/icons/mocha_pot.png"></img>
+		<%} %>
+
+		<% if (menu.drink.toLowerCase() == "pour over"){%>  
+			<img src="/icons/pourOver.png"></img>
+		<%} %>
+
+		<% if (menu.drink.toLowerCase() == "french press"){%>  
+			<img src="/icons/frenchPress.png"></img>
+		<%} %>
+
+		<% if (menu.drink.toLowerCase() == "coffee milk"){%>  
+			<img src="/icons/coffeeMilk.png"></img>
+		<%} %>
+
+		<% if (menu.drink.toLowerCase() == "frappe"){%>  
+			<img src="/icons/frappe.png"></img>
+		<%} %>
+
+		<% if (menu.drink.toLowerCase() == "coffee beans (1lb)"){%>  
+			<img src="/icons/coffeeBeans.png"></img>
+		<%} %>
+
+		<% if (menu.drink.toLowerCase() == "coffee"){%>  
+			<img src="/icons/coffee.png"></img>
+		<%} %>
+
+		<%= menu.drink %>: <%= menu.cost %> 
+	</li>
+<% }) %>
+

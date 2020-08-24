@@ -1,3 +1,19 @@
-<h1> You ordered a: <%= printOrder %> </h1>
+<h1> You ordered a: <%= printOrder.toUpperCase() %> </h1>
+
+<% if (printOrder.toLowerCase() == "latte" || printOrder.toLowerCase() == "mocha" ){%>  
+	<img src="/icons/latte.png"></img>
+<%} %>
+
+<% if (printOrder.toLowerCase() == "mochapot"){%>  
+	<img src="/icons/mocha_pot.png"></img>
+<%} %>
+
+<% if (printOrder.toLowerCase() == "pourover"){%>  
+	<img src="/icons/pourOver.png"></img>
+<%} %>
+
+<% if (printOrder.toLowerCase() == "frenchpress"){%>  
+	<img src="/icons/frenchPress.png"></img>
+<%} %>
 
 <p> "order.ejs is connected" </p>
