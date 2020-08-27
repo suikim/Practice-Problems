@@ -1,0 +1,13 @@
+<h1> Movies List </h1>
+
+<% movie.forEach(function(movie){ %>
+	<li> <%= movie %> </li>
+
+<% }); %>
+
+
+<form action="/addMovie" method="POST">
+		<input type="text" name="newMovie" placeholder="Movie Name">
+		<button> I watched a new movie </button>
+
+</form>
