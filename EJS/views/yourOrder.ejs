@@ -1,0 +1,18 @@
+
+<h1> Your Order </h1>
+<% var total = 0; %>
+
+<% order.forEach(function(item){ %>
+	<li> <%= item.drink %> :   <%= item.cost %>  </li>
+	<% total = total + item.cost; %>
+
+<% }); %>
+
+<p>Total:  $<%= total %> </p>
+
+<form action="/addOrder" method="POST">
+	<input type="text" name="drink" placeholder="drink">
+	<input type="decimal" name="cost" placeholder="cost">
+	<button> Add </button>
+
+</form>
