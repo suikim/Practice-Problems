@@ -1,0 +1,14 @@
+
+<%- include ("partials/header") %>
+
+<h1> Add New Cafe </h>
+
+<form action="/allCafes" method="POST">
+	<input type="text" name="cafeName" placeholder="name">
+	<input type="text" name="cafeImage" placeholder="image url">
+	<button> Submit </button>
+</form>
+
+<a href="/allCafes">Go Back to Cafes</a>
+
+<%- include ("partials/footer") %>
