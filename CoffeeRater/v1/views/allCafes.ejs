@@ -1,16 +1,32 @@
 <%- include ("partials/header") %>
 
+<div class="container">
 
-<h1> Cafes Page </h1>
+	
+	<header class="jumbotron">
+		<h1> Welcome to Cafe Rater </h1>
+		<p> Search through some of the best rated coffee spots in the world! </p>
+		<a class="btn btn-primary" href="/allCafes/new" role="button">Add New Cafe</a>
+	</header>
 
-<a href="/allCafes/new"> Add new Cafe </a>
-
-<% cafes.forEach(function(cafe){ %>
-	<div>
-		<h4> <%= cafe.name %> </h4> 
-		<img src="<%= cafe.image %>" />
+	<div class="container">
+		<div class="row">
+			<% cafes.forEach(function(cafe){ %>
+				<div class="col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<div class="image-thumb" style="background-image: url(<%= cafe.image %>)"></div>
+						<div class="caption"> 
+							<h4> <%= cafe.name %> </h4>
+						</div>
+					</div>
+				</div>
+			<% }); %>
+		</div>
 	</div>
-<% }); %>
+
+
+	
+</div>
 
 
 <%- include ("partials/footer") %>

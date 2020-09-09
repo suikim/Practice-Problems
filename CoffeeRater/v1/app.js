@@ -6,6 +6,10 @@ app.set("view engine", "ejs");
 // to use body parser
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true })); 
+// to use images/css stylesheets: static files in express must be inside directory 
+//    specified in static middleware (eg. 'public'), this line tells ejs to serve 
+//    public directory
+app.use(express.static(__dirname + '/public'));
 
 //cafe array
 var cafeList = [
