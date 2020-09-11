@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 //    specified in static middleware (eg. 'public'), this line tells ejs to serve 
 //    public directory
 //app.use(express.static(__dirname, '/public'));
-app.use(express.static('/public'));
+app.use(express.static( "public" ));
 
 
 //cafe array
